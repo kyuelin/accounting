@@ -1,0 +1,100 @@
+package dev.kyuelin.accounting;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Constants {
+    public static final Map<String, String> catMap = new HashMap<String, String>();
+    static {
+        catMap.put("Credit Card Payment", "Transfer");
+        catMap.put("Paycheck", "Wages & Tips");
+        catMap.put("Restaurants", "Food & Dining");
+        catMap.put("Fast Food", "Food & Dining");
+        catMap.put("Mobile Phone", "Phone");
+        catMap.put("Gas & Fuel", "Fuel");
+        catMap.put("Pharmacy", "Medicine/Drugs");
+        catMap.put("Movies & DVDs", "Movies/Theater");
+        catMap.put("Auto & Transport", "Income");
+        catMap.put("Parking", "Parking/Toll");
+        catMap.put("Check", "Transfer");
+        catMap.put("Home Improvement", "Improvement");
+        catMap.put("Kids Activities", "CHILDREN.Other");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+        catMap.put("Paycheck", "Income");
+    }
+
+    public static final Map<String, String> segMap = new HashMap<String, String>();
+    static {
+        segMap.put("Air Travel","VACATION");
+        segMap.put("Alcohol & Bars","DAILY LIVING");
+        segMap.put("Amusement","VACATION");
+        segMap.put("Auto & Transport","TRANSPORTATION");
+        segMap.put("Auto Insurance","INSURANCE");
+        segMap.put("Auto Payment","OBLIGATIONS");
+        segMap.put("Baby Supplies","DAILY LIVING");
+        segMap.put("Bills & Utilities","HOME EXPENSES");
+        segMap.put("Books","ENTERTAINMENT");
+        segMap.put("Books & Supplies","ENTERTAINMENT");
+        segMap.put("Business Services","DAILY LIVING");
+        segMap.put("Cash & ATM","DAILY LIVING");
+        segMap.put("Charity","DAILY LIVING");
+        segMap.put("Check","DAILY LIVING");
+        segMap.put("Clothing","DAILY LIVING");
+        segMap.put("Coffee Shops","DAILY LIVING");
+        segMap.put("Doctor","DAILY LIVING");
+        segMap.put("Education","CHILDREN");
+        segMap.put("Electronics & Software","ENTERTAINMENT");
+        segMap.put("Entertainment","ENTERTAINMENT");
+        segMap.put("Eyecare","DAILY LIVING");
+        segMap.put("Federal Tax","OBLIGATIONS");
+        segMap.put("Food & Dining","DAILY LIVING");
+        segMap.put("Restaurants","DAILY LIVING");
+        segMap.put("Fast Food","DAILY LIVING");
+        segMap.put("Furnishings","HOME EXPENSES");
+        segMap.put("Gas & Fuel","TRANSPORTATION");
+        segMap.put("Gift","DAILY LIVING");
+        segMap.put("Gifts & Donations","DAILY LIVING");
+        segMap.put("Groceries","DAILY LIVING");
+        segMap.put("Hobbies","ENTERTAINMENT");
+        segMap.put("Home Improvement","HOME EXPENSES");
+        segMap.put("Hotel","VACATION");
+        segMap.put("Income","INCOME");
+        segMap.put("Interest Income","INCOME");
+        segMap.put("Internet","HOME EXPENSES");
+        segMap.put("Kids","CHILDREN");
+        segMap.put("Kids Activities","CHILDREN");
+        segMap.put("Mobile Phone","HOME EXPENSES");
+        segMap.put("Mortgage & Rent","HOME EXPENSES");
+        segMap.put("Movies & DVDs","ENTERTAINMENT");
+        segMap.put("Music","ENTERTAINMENT");
+        segMap.put("Newspapers & Magazines","ENTERTAINMENT");
+        segMap.put("Office Supplies","DAILY LIVING");
+        segMap.put("Parking","TRANSPORTATION");
+        segMap.put("Personal Care","HEALTH");
+        segMap.put("Pharmacy","HEALTH");
+        segMap.put("Printing","DAILY LIVING");
+        segMap.put("Property Tax","OBLIGATIONS");
+        segMap.put("Public Transportation","TRANSPORTATION");
+        segMap.put("Rental Car & Taxi","VACATION");
+        segMap.put("Rental Income","INCOME");
+        segMap.put("Service & Parts","TRANSPORTATION");
+        segMap.put("Service Fee","TRANSPORTATION");
+        segMap.put("Shopping","DAILY LIVING");
+        segMap.put("Sporting Goods","DAILY LIVING");
+        segMap.put("Sports","ENTERTAINMENT");
+        segMap.put("State Tax","OBLIGATIONS");
+        segMap.put("Toys","CHILDREN");
+        segMap.put("Transfer","HOME EXPENSES");
+        segMap.put("Transfer for Cash Spending","HOME EXPENSES");
+        segMap.put("Tuition","CHILDREN");
+        segMap.put("Uncategorized","HOME EXPENSES");
+        segMap.put("Utilities","HOME EXPENSES");
+        segMap.put("Credit Card Payment","HOME EXPENSES");
+    }
+}

@@ -1,0 +1,32 @@
+<beanio xmlns="http://www.beanio.org/2012/03">
+    <stream name="transactions" format="csv">
+        <parser>
+            <property name="delimiter" value="," />
+            <property name="lineSeparator" value="\n" />
+            <property name="whitespaceAllowed" value="true" />
+        </parser>
+        <record name="header" minOccurs="1" maxOccurs="1"  class="map">
+            <field name="txnDate" ignore="true" literal="Date" />
+            <field name="txnDesc" ignore="true" literal="Description" />
+            <field name="txnOrgDesc" ignore="true" literal="Original Description" />
+            <field name="txnAmt" ignore="true" literal="Amount" />
+            <field name="txnType" ignore="true" literal="Transaction Type" />
+            <field name="txnCat" ignore="true" literal="Category" />
+            <field name="acctName" ignore="true" literal="Account Name" />
+            <field name="lables" ignore="true" literal="Labels" />
+            <field name="notes" ignore="true" literal="Notes" />
+        </record>
+        <record name="detail" minOccurs="0" maxOccurs="unbounded"
+                class="dev.kyuelin.accounting.Transaction">
+            <field name="txnDate" format="MM/dd/yyyy"/>
+            <field name="txnDesc" trim="true"/>
+            <field name="txnOrgDesc" trim="true"/>
+            <field name="txnAmt" trim="true"/>
+            <field name="txnType" trim="true"/>
+            <field name="txnCat" trim="true"/>
+            <field name="acctName" trim="true"/>
+            <field name="lables" trim="true"/>
+            <field name="notes" trim="true"/>
+        </record>
+    </stream>
+</beanio>
