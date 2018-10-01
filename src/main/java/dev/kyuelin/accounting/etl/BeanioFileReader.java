@@ -31,7 +31,7 @@ public class BeanioFileReader implements Reader {
         }
 
         reader = streamFactory.createReader(streamName, new InputStreamReader(inputStream));
-        return (reader != null);
+        return (reader != null*);
     }
 
     public Object read() {
