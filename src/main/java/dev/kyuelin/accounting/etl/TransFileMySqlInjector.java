@@ -1,5 +1,7 @@
-package dev.kyuelin.accounting;
+package dev.kyuelin.accounting.etl;
 
+import dev.kyuelin.accounting.model.Transaction;
+import dev.kyuelin.accounting.utils.Constants;
 import org.beanio.BeanReader;
 import org.beanio.StreamFactory;
 
@@ -11,7 +13,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransFileReader {
+public class TransFileMySqlInjector {
+
+    //private Reader reader = new BeanioFileReader();
 
     private BeanReader reader = null;
     private StreamFactory streamFactory = null;
@@ -23,6 +27,12 @@ public class TransFileReader {
     String url = "jdbc:mysql://localhost:3306/mysql";
     String user = "kennethlin";
     String password = "k123";
+
+/*
+    public void initReader() {
+        reader.init();
+    }
+*/
 
     public void initReader(final String transFile) throws FileNotFoundException {
         if (null == streamFactory) {
@@ -42,7 +52,7 @@ public class TransFileReader {
 //        pst.executeUpdate();
     }
 
-    public List<Transaction> readTransList() throws SQLException {
+    public List<Transaction> injTransList() throws SQLException {
         List<Transaction> transactionList = new ArrayList<Transaction>();
         Object record = null;
         int recordRead = 0;
@@ -50,7 +60,7 @@ public class TransFileReader {
             while ((record = reader.read()) != null)
             {
                 if ("detail".equals(reader.getRecordName()))
-                //if (reader.getLineNumber() > 1)
+                //if (injector.getLineNumber() > 1)
                 {
                     Transaction transaction = (Transaction) record;
                     //transactionList.add(transaction);
@@ -78,9 +88,9 @@ public class TransFileReader {
 
 /*
     public Transaction readNext() {
-        if (null != reader) {
-            Transaction t = (Transaction) reader.read();
-            if ("detail".equals(reader.getRecordName()))
+        if (null != injector) {
+            Transaction t = (Transaction) injector.read();
+            if ("detail".equals(injector.getRecordName()))
                 return t;
             else
                 return null;
@@ -95,15 +105,22 @@ public class TransFileReader {
 
     public static void main(String[] args)
     {
-        TransFileReader reader = new TransFileReader();
+        TransFileMySqlInjector injector = new TransFileMySqlInjector();
+        String tranFile = "/Users/kennethlin/Google Drive/19204/archive/transactions_1712.csv";
         try {
-            reader.initReader("/Users/kennethlin/Google Drive/19204/archive/transactions_1712.csv");
-            reader.initWriter();
-            reader.readTransList();
+            injector.initReader(tranFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        }
+        try {
+            injector.initWriter();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            injector.injTransList();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
         }
     }
 }

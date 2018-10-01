@@ -17,7 +17,7 @@
             <field name="notes" ignore="true" literal="Notes" />
         </record>
         <record name="detail" minOccurs="0" maxOccurs="unbounded"
-                class="dev.kyuelin.accounting.Transaction">
+                class="dev.kyuelin.accounting.model.Transaction">
             <field name="txnDate" format="MM/dd/yyyy"/>
             <field name="txnDesc" trim="true"/>
             <field name="txnOrgDesc" trim="true"/>

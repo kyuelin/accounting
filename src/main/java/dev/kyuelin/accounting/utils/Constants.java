@@ -1,4 +1,4 @@
-package dev.kyuelin.accounting;
+package dev.kyuelin.accounting.utils;
 
 import java.util.HashMap;
 import java.util.Map;
