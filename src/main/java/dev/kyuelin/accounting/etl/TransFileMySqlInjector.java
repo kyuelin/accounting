@@ -15,7 +15,7 @@ import java.util.List;
 
 public class TransFileMySqlInjector {
 
-    //private Reader reader = new BeanioFileReader();
+    //private ReaderInterface reader = new BeanioFileReader();
 
     private BeanReader reader = null;
     private StreamFactory streamFactory = null;

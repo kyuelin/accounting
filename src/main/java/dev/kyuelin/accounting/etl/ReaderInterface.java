@@ -1,6 +1,6 @@
 package dev.kyuelin.accounting.etl;
 
-public interface Reader {
+public interface ReaderInterface {
     boolean init();
     Object read();
 }
