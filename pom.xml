@@ -22,6 +22,7 @@
     </build>
     <modules>
         <module>springbatch</module>
+        <module>transactions</module>
     </modules>
 
     <dependencies>
