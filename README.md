@@ -13,3 +13,12 @@ Java accounting project with Spring Batch and Maven build files.
 - `springbatch/` — batch processing components
 - `accounting.iml` — IDE project metadata
 - `.gitignore` — ignored files
+
+## Maturity review
+
+**Maturity:** Partial application / backend skeleton with domain and batch-processing pieces.
+
+**What remains to make this a functional application:**
+- Add a clear application entry point and complete the user-facing flow.
+- Document the data model and expected inputs/outputs.
+- Add tests and runtime instructions so the project is runnable end-to-end.
